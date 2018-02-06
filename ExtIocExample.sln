@@ -15,7 +15,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.4-Domain", "1.4-Domain", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.5-Infrastructure", "1.5-Infrastructure", "{427BD4C0-6C5B-4179-B595-1B64B4094839}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Seedwork", "Domain.Seedwork\Domain.Seedwork.csproj", "{EA47677D-33AB-401F-B0DF-023D3E223B8D}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA47677D-33AB-401F-B0DF-023D3E223B8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA47677D-33AB-401F-B0DF-023D3E223B8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA47677D-33AB-401F-B0DF-023D3E223B8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA47677D-33AB-401F-B0DF-023D3E223B8D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
@@ -25,5 +37,6 @@ Global
 		{9AA0F937-4B95-4DA0-A913-515D62A9C3D3} = {4E230DFD-305A-4196-ABD8-BE3B40D8375D}
 		{8B03690C-07BC-453B-BD1D-A716179656AA} = {4E230DFD-305A-4196-ABD8-BE3B40D8375D}
 		{427BD4C0-6C5B-4179-B595-1B64B4094839} = {4E230DFD-305A-4196-ABD8-BE3B40D8375D}
+		{EA47677D-33AB-401F-B0DF-023D3E223B8D} = {8B03690C-07BC-453B-BD1D-A716179656AA}
 	EndGlobalSection
 EndGlobal
