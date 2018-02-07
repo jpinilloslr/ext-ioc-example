@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq.Expressions;
 
 namespace Domain.Seedwork
 {
@@ -16,15 +15,8 @@ namespace Domain.Seedwork
 
         TEntity Update(TEntity entity);
 
-        void TrackItem(TEntity entity);
-
         TEntity Get(TKey id);
 
         IEnumerable<TEntity> GetAll();
-
-        IEnumerable<TEntity> GetPaged<TProperty>(int pageIndex, int pageCount, 
-            Func<TEntity, TProperty> orderByExpression, bool ascending);
-
-        IEnumerable<TEntity> GetFiltered(Expression<Func<TEntity, bool>> filter);
     }
 }
