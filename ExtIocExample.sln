@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Seedwork", "Domain.S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtIocExample.Domain", "ExtIocExample.Domain\ExtIocExample.Domain.csproj", "{DA71424D-CCBB-4EE4-A549-4B1219EC0860}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.Seedwork", "Application.Seedwork\Application.Seedwork.csproj", "{62576A65-AC0B-45F6-9004-5EABFADE3140}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{DA71424D-CCBB-4EE4-A549-4B1219EC0860}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA71424D-CCBB-4EE4-A549-4B1219EC0860}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA71424D-CCBB-4EE4-A549-4B1219EC0860}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62576A65-AC0B-45F6-9004-5EABFADE3140}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62576A65-AC0B-45F6-9004-5EABFADE3140}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62576A65-AC0B-45F6-9004-5EABFADE3140}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62576A65-AC0B-45F6-9004-5EABFADE3140}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -45,5 +51,6 @@ Global
 		{427BD4C0-6C5B-4179-B595-1B64B4094839} = {4E230DFD-305A-4196-ABD8-BE3B40D8375D}
 		{EA47677D-33AB-401F-B0DF-023D3E223B8D} = {8B03690C-07BC-453B-BD1D-A716179656AA}
 		{DA71424D-CCBB-4EE4-A549-4B1219EC0860} = {8B03690C-07BC-453B-BD1D-A716179656AA}
+		{62576A65-AC0B-45F6-9004-5EABFADE3140} = {9AA0F937-4B95-4DA0-A913-515D62A9C3D3}
 	EndGlobalSection
 EndGlobal
