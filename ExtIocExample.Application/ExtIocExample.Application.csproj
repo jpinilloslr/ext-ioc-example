@@ -42,11 +42,33 @@
   <ItemGroup>
     <Compile Include="Dtos\ClientDto.cs" />
     <Compile Include="Dtos\ProductDto.cs" />
+    <Compile Include="ExternalServices\ITypeMapperService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Interceptors\CheckBy.cs" />
+    <Compile Include="Services\Interceptors\CheckClientExistence.cs" />
+    <Compile Include="Services\Interceptors\CheckProductExistence.cs" />
+    <Compile Include="Services\Interceptors\ValidateProductDto.cs" />
+    <Compile Include="Services\Interceptors\ValidateClientDto.cs" />
+    <Compile Include="Services\Interfaces\IProductAppService.cs" />
+    <Compile Include="Services\Interfaces\IClientAppService.cs" />
+    <Compile Include="Services\ClientAppService.cs" />
+    <Compile Include="Services\ProductAppService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Services\Interfaces\" />
+    <ProjectReference Include="..\Application.Seedwork\Application.Seedwork.csproj">
+      <Project>{62576A65-AC0B-45F6-9004-5EABFADE3140}</Project>
+      <Name>Application.Seedwork</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Domain.Seedwork\Domain.Seedwork.csproj">
+      <Project>{EA47677D-33AB-401F-B0DF-023D3E223B8D}</Project>
+      <Name>Domain.Seedwork</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ExtIocExample.Domain\ExtIocExample.Domain.csproj">
+      <Project>{da71424d-ccbb-4ee4-a549-4b1219ec0860}</Project>
+      <Name>ExtIocExample.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -8,13 +8,13 @@ namespace Domain.Seedwork
     {
         IUnitOfWork UnitOfWork { get; }
 
-        void Create(TEntity entity);
+        TEntity Create(TEntity entity);
 
         void Delete(TEntity entity);
 
         void DeleteById(TKey id);
 
-        void Update(TEntity entity);
+        TEntity Update(TEntity entity);
 
         void TrackItem(TEntity entity);
 
