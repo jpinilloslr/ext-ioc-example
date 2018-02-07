@@ -1,6 +1,9 @@
 ﻿using System.Linq;
 using System.Reflection;
+using System.Web.Http.Dependencies;
+using AutoMapper;
 using Domain.Seedwork.CoreAttributes;
+using MoreLinq;
 
 namespace Infrastructure.Crosscutting.ExternalServices.TypeMapping
 {

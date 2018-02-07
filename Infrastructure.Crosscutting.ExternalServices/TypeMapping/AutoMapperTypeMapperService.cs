@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Web.Http.Dependencies;
+using AutoMapper;
 using Domain.Seedwork.CoreAttributes;
 using ExtIocExample.Application.ExternalServices;
 

@@ -1,14 +1,14 @@
 ﻿using AutoMapper;
 using ExtIocExample.Application.Dtos;
-using ExtIocExample.Domain.Aggregates.ClientAggregate;
+using ExtIocExample.Domain.Aggregates.ProductAggregate;
 
 namespace Infrastructure.Crosscutting.ExternalServices.TypeMapping.Configuration
 {
-    public class GadgetTypeAndGadgetTypeDtoMap : ITypeMapConfigurator
+    public class ProductAndProductDtoMap : ITypeMapConfigurator
     {
         public void Configure()
         {
-            var map = Mapper.CreateMap<Client, ClientDto>();
+            var map = Mapper.CreateMap<Product, ProductDto>();
             map.ReverseMap();
         }
     }
