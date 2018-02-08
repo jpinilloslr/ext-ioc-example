@@ -296,6 +296,10 @@
       <Project>{C9640EA2-7E2E-4DA8-8DB6-BBFE54321314}</Project>
       <Name>ExtIocExample.Application</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Infrastructure.Crosscutting.IoC.Seedwork\Infrastructure.Crosscutting.IoC.Seedwork.csproj">
+      <Project>{99c9d24e-1903-4432-9b78-87cdfe8cfceb}</Project>
+      <Name>Infrastructure.Crosscutting.IoC.Seedwork</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -338,4 +342,38 @@
   </Target>
   <Target Name="AfterBuild">
   </Target> -->
+  <PropertyGroup>
+    <CopyAllFilesToSingleFolderForPackageDependsOn>
+      CustomPublishFiles;
+      $(CopyAllFilesToSingleFolderForPackageDependsOn);
+    </CopyAllFilesToSingleFolderForPackageDependsOn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <CleanDependsOn>
+      $(CleanDependsOn);
+      CustomCleanWebProject;
+    </CleanDependsOn>
+  </PropertyGroup>
+  <Target Name="CustomCleanWebProject">
+    <RemoveDir Condition="Exists(obj)" Directories="obj" ContinueOnError="true" />
+    <RemoveDir Condition="Exists(bin)" Directories="bin" ContinueOnError="true" />
+  </Target>
+  <Target Name="CopyAssembliesToOutput">
+    <ItemGroup>
+      <TestAssemblies Include="..\*\bin\$(Configuration)\*Specs.dll;" />
+    </ItemGroup>
+    <ItemGroup>
+      <CompiledAssemblies Exclude="@(TestAssemblies)" Include="..\*\bin\$(Configuration)\*.dll" />
+    </ItemGroup>
+    <Copy SkipUnchangedFiles="true" SourceFiles="@(CompiledAssemblies->'%(FullPath)')" DestinationFolder="$(OutDir)" />
+  </Target>
+  <Target Name="CustomPublishFiles">
+    <ItemGroup>
+      <FilesForPackagingFromProject Include="%(CompiledAssemblies.Identity)">
+        <DestinationRelativePath>bin\%(Filename)%(Extension)</DestinationRelativePath>
+      </FilesForPackagingFromProject>
+    </ItemGroup>
+  </Target>
+  <Target Name="AfterBuild" DependsOnTargets="CopyAssembliesToOutput">
+  </Target>
 </Project>
