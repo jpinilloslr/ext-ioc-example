@@ -40,7 +40,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.5.2.1-IoC", "1.5.2.1-IoC"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.5.2.2-ExternalServices", "1.5.2.2-ExternalServices", "{6F202F45-1F06-47DF-BAA0-354482D34A21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Data", "Infrastructure.Data\Infrastructure.Data.csproj", "{8A6C3678-596F-4ECE-8EE2-0BF28AC22C62}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtIocExample.Infrastructure.Data", "Infrastructure.Data\ExtIocExample.Infrastructure.Data.csproj", "{8A6C3678-596F-4ECE-8EE2-0BF28AC22C62}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Crosscutting.ExternalServices", "Infrastructure.Crosscutting.ExternalServices\Infrastructure.Crosscutting.ExternalServices.csproj", "{2F70ECE0-BD41-474F-909E-7B5BAD3D08C3}"
 EndProject

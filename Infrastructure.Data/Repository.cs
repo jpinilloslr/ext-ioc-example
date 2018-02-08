@@ -2,7 +2,7 @@
 using System.Linq;
 using Domain.Seedwork;
 
-namespace Infrastructure.Data
+namespace ExtIocExample.Infrastructure.Data
 {
     public abstract class Repository<TEntity> : IRepository<TEntity, int> 
         where TEntity : Entity<int>

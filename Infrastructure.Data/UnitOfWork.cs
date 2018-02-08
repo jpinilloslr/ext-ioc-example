@@ -1,7 +1,7 @@
 ﻿using Domain.Seedwork;
 using Domain.Seedwork.CoreAttributes;
 
-namespace Infrastructure.Data
+namespace ExtIocExample.Infrastructure.Data
 {
     [Binding(SuperType = typeof(IUnitOfWork))]
     public class UnitOfWork : IUnitOfWork

@@ -2,7 +2,7 @@
 using Domain.Seedwork.CoreAttributes;
 using ExtIocExample.Domain.Aggregates.ProductAggregate;
 
-namespace Infrastructure.Data
+namespace ExtIocExample.Infrastructure.Data
 {
     [Binding(SuperType = typeof(IProductRepository))]
     public class ProductRepository : Repository<Product>, IProductRepository
