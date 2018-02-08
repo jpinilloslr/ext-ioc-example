@@ -1,26 +1,29 @@
 ﻿using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using Domain.Seedwork;
+using Newtonsoft.Json;
 
 namespace ExtIocExample.Infrastructure.Data
 {
     public abstract class Repository<TEntity> : IRepository<TEntity, int> 
         where TEntity : Entity<int>
     {
-        private int _lastGeneratedId;
-
+        private List<TEntity> _store;
         public IUnitOfWork UnitOfWork { get; }
-        protected List<TEntity> Store { get; set; }
+        public abstract string FileName { get; }
+
 
         public Repository(IUnitOfWork unitOfWork)
         {
-            _lastGeneratedId = 0;
-            Store = new List<TEntity>();
+            _store = new List<TEntity>();
             UnitOfWork = unitOfWork;
+            LoadData();
         }
 
         public void Dispose()
         {
+            SaveData();
         }
         
         public TEntity Create(TEntity entity)
@@ -29,7 +32,7 @@ namespace ExtIocExample.Infrastructure.Data
             {
                 entity.Id = GetGenerateId();                
             }
-            Store.Add(entity);
+            _store.Add(entity);
             return entity;
         }
 
@@ -40,8 +43,8 @@ namespace ExtIocExample.Infrastructure.Data
 
         public void DeleteById(int id)
         {
-            var index = Store.FindIndex(x => x.Id == id);
-            Store.RemoveAt(index);
+            var index = _store.FindIndex(x => x.Id == id);
+            _store.RemoveAt(index);
         }
 
         public TEntity Update(TEntity entity)
@@ -52,18 +55,57 @@ namespace ExtIocExample.Infrastructure.Data
 
         public TEntity Get(int id)
         {
-            return Store.FirstOrDefault(x => x.Id == id);
+            return _store.FirstOrDefault(x => x.Id == id);
         }
 
         public IEnumerable<TEntity> GetAll()
         {
-            return Store.ToList();
+            return _store.ToList();
         }
 
         private int GetGenerateId()
         {
-            _lastGeneratedId++;
-            return _lastGeneratedId;
+            return _store.Count + 1;
+        }
+
+        private void SaveData()
+        {
+            TextWriter writer = null;
+            try
+            {
+                var contentsToWriteToFile = JsonConvert.SerializeObject(_store);
+                writer = new StreamWriter(GetFileName());
+                writer.Write(contentsToWriteToFile);
+            }
+            finally
+            {
+                writer?.Close();
+            }
+        }
+
+        private void LoadData()
+        {
+            var fileName = GetFileName();
+
+            if (File.Exists(fileName))
+            {
+                TextReader reader = null;
+                try
+                {
+                    reader = new StreamReader(GetFileName());
+                    var fileContents = reader.ReadToEnd();
+                    _store = JsonConvert.DeserializeObject<List<TEntity>>(fileContents);
+                }
+                finally
+                {
+                    reader?.Close();
+                }
+            }
+        }
+
+        private string GetFileName()
+        {
+            return Path.Combine(Path.GetTempPath(), FileName);
         }
     }
 }

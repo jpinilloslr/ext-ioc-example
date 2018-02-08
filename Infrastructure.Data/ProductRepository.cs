@@ -11,5 +11,7 @@ namespace ExtIocExample.Infrastructure.Data
             : base(unitOfWork)
         {
         }
+
+        public override string FileName => "products.json";
     }
 }
