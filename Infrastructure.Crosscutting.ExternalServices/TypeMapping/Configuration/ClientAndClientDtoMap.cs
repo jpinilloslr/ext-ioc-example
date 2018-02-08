@@ -2,7 +2,7 @@
 using ExtIocExample.Application.Dtos;
 using ExtIocExample.Domain.Aggregates.ClientAggregate;
 
-namespace Infrastructure.Crosscutting.ExternalServices.TypeMapping.Configuration
+namespace ExtIocExample.Infrastructure.Crosscutting.ExternalServices.TypeMapping.Configuration
 {
     public class GadgetTypeAndGadgetTypeDtoMap : ITypeMapConfigurator
     {

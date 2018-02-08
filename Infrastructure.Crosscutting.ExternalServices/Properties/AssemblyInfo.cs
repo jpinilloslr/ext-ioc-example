@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Infrastructure.Crosscutting.ExternalServices")]
+[assembly: AssemblyTitle("ExtIocExample.Infrastructure.Crosscutting.ExternalServices")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Infrastructure.Crosscutting.ExternalServices")]
+[assembly: AssemblyProduct("ExtIocExample.Infrastructure.Crosscutting.ExternalServices")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

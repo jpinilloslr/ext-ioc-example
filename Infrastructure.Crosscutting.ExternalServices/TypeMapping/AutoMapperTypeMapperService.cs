@@ -5,7 +5,7 @@ using AutoMapper;
 using Domain.Seedwork.CoreAttributes;
 using ExtIocExample.Application.ExternalServices;
 
-namespace Infrastructure.Crosscutting.ExternalServices.TypeMapping
+namespace ExtIocExample.Infrastructure.Crosscutting.ExternalServices.TypeMapping
 {
     [Binding]
     public class AutoMapperTypeMapperService : ITypeMapperService

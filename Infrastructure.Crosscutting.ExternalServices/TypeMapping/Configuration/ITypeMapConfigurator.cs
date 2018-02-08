@@ -1,4 +1,4 @@
-﻿namespace Infrastructure.Crosscutting.ExternalServices.TypeMapping.Configuration
+﻿namespace ExtIocExample.Infrastructure.Crosscutting.ExternalServices.TypeMapping.Configuration
 {
     /// <summary>
     ///     Permite configurar el mapeo entre diferentes

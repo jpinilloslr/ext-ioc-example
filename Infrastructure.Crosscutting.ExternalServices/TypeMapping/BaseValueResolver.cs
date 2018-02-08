@@ -5,7 +5,7 @@ using AutoMapper;
 using Domain.Seedwork.CoreAttributes;
 using MoreLinq;
 
-namespace Infrastructure.Crosscutting.ExternalServices.TypeMapping
+namespace ExtIocExample.Infrastructure.Crosscutting.ExternalServices.TypeMapping
 {
     public abstract class BaseValueResolver : IValueResolver
     {

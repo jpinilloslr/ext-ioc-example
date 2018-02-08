@@ -7,8 +7,8 @@
     <ProjectGuid>{2F70ECE0-BD41-474F-909E-7B5BAD3D08C3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Infrastructure.Crosscutting.ExternalServices</RootNamespace>
-    <AssemblyName>Infrastructure.Crosscutting.ExternalServices</AssemblyName>
+    <RootNamespace>ExtIocExample.Infrastructure.Crosscutting.ExternalServices</RootNamespace>
+    <AssemblyName>ExtIocExample.Infrastructure.Crosscutting.ExternalServices</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

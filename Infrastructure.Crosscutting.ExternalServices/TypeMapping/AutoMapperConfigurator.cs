@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using Domain.Seedwork.CoreAttributes;
-using Infrastructure.Crosscutting.ExternalServices.TypeMapping.Configuration;
+using ExtIocExample.Infrastructure.Crosscutting.ExternalServices.TypeMapping.Configuration;
 
-namespace Infrastructure.Crosscutting.ExternalServices.TypeMapping
+namespace ExtIocExample.Infrastructure.Crosscutting.ExternalServices.TypeMapping
 {
     [Binding(IsSelfBindable = true, Scope = BindingScope.Singleton)]
     public class AutoMapperConfigurator
